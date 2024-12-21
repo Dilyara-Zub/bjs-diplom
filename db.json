@@ -8,7 +8,7 @@
       "balance": {
         "RUB": 1000,
         "USD": 20,
-        "EUR": 20,
+        "EUR": 458.57584255953395,
         "NTC": 3000
       }
     },
@@ -19,10 +19,10 @@
       "id": 2,
       "netocoins": 100,
       "balance": {
-        "RUB": 20,
-        "USD": 0,
-        "EUR": 0,
-        "NTC": 100
+        "RUB": 32,
+        "USD": 10000,
+        "EUR": 5093.857584255953,
+        "NTC": 600
       }
     },
     {
@@ -55,17 +55,90 @@
       "password": "demo",
       "id": 5,
       "balance": {
-        "RUB": 60000,
+        "RUB": 86779,
         "USD": 500,
-        "EUR": 600,
-        "NTC": 90000
+        "EUR": 10601,
+        "NTC": 90112
+      }
+    },
+    {
+      "created_at": "2024-12-17T18:49:39.120Z",
+      "login": "чьакьб",
+      "password": "ьа",
+      "id": 6,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2024-12-17T18:51:56.397Z",
+      "login": "       ",
+      "password": "     ",
+      "id": 7,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2024-12-17T18:55:19.131Z",
+      "login": "sfBSBS",
+      "password": "nbSB S",
+      "id": 8,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2024-12-17T18:56:06.671Z",
+      "login": "xxx",
+      "password": "skdvh",
+      "id": 9,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2024-12-17T19:01:18.911Z",
+      "login": "petr",
+      "password": "sjvhs",
+      "id": 10,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 500,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2024-12-19T10:50:46.251Z",
+      "login": "belka007",
+      "password": "007",
+      "id": 11,
+      "balance": {
+        "RUB": 150000,
+        "USD": 100000,
+        "EUR": 100000,
+        "NTC": 0
       }
     }
   ],
   "favorites": {
     "1": {
       "2": "Ваня дурачок",
-      "3": "Пират Петр"
+      "5": "Игорь",
+      "10": "Елена"
     },
     "2": {
       "1": "Чувак, который должен 20к неткойнов",
