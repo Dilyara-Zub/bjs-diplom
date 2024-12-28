@@ -39,7 +39,7 @@ moneyManager.addMoneyCallback = (data) => {
             ProfileWidget.showProfile(response.data);
             moneyManager.setMessage(true, 'Баланс успешно пополнен!');           
         } else {
-            moneyManager.setMessage(false, 'Такая валюта не существует');
+            moneyManager.setMessage(false, response.error);
     }
 }  
 )}
@@ -50,7 +50,7 @@ moneyManager.conversionMoneyCallback = (data) => {
             ProfileWidget.showProfile(response.data);
             moneyManager.setMessage(true, 'Конвертация валюты выполнена');     
         } else {
-            moneyManager.setMessage(false, 'Не хватает денег для конвертации из RUB в EUR');
+            moneyManager.setMessage(false, response.error);
         }
     })
 }
@@ -61,7 +61,7 @@ moneyManager.sendMoneyCallback = (data) => {
             ProfileWidget.showProfile(response.data);
             moneyManager.setMessage(true, 'Перевод валюты выполнен!')  
         } else {
-            moneyManager.setMessage(false, 'Не хватает денег для перевода');
+            moneyManager.setMessage(false, response.error);
         } 
     })
 }
@@ -86,7 +86,7 @@ favoritesWidget.addUserCallback = (data) => {
             moneyManager.updateUsersList(response.data);
             favoritesWidget.setMessage(true, 'Пользователь добавлен в список избранных!')
         } else {
-            favoritesWidget.setMessage(false, 'Такой пользователь уже есть в списке');
+            favoritesWidget.setMessage(false, response.error);
         }        
     })
 }
@@ -99,7 +99,7 @@ favoritesWidget.removeUserCallback = (data) => {
             moneyManager.updateUsersList(response.data);
             favoritesWidget.setMessage(true, 'Пользователь удален!')
         } else {
-            favoritesWidget.setMessage(false, 'Ошибка! Невозможно удалить пользователя из избранного.')
+            favoritesWidget.setMessage(false, response.error)
         }           
         
     })
