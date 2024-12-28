@@ -35,9 +35,7 @@ const moneyManager = new MoneyManager();
 
 moneyManager.addMoneyCallback = (data) => {
     ApiConnector.addMoney(data, (response) => {
-        if(!data.currency) {
-            moneyManager.setMessage(false, 'Такая валюта не существует');
-        } else if(!data.amount) {
+        if(!response.success) {
             moneyManager.setMessage(false, 'Ошибка при переводе значения в число');
         } else {
             ProfileWidget.showProfile(response.data);
@@ -48,12 +46,8 @@ moneyManager.addMoneyCallback = (data) => {
 
 moneyManager.conversionMoneyCallback = (data) => {
     ApiConnector.convertMoney(data, (response) => {
-        if(!data.fromAmount) {
+        if(!response.success) {
             moneyManager.setMessage(false, 'Ошибка при переводе значения в число');
-        } else if(!data.fromCurrency) {
-            moneyManager.setMessage(false, 'Исходная валюта не была выбрана');
-        } else if(!data.targetCurrency) {
-            moneyManager.setMessage(false, 'Целевая валюта не была выбрана');
         } else {
             ProfileWidget.showProfile(response.data);
             moneyManager.setMessage(true, 'Конвертация валюты выполнена');
@@ -63,12 +57,8 @@ moneyManager.conversionMoneyCallback = (data) => {
 
 moneyManager.sendMoneyCallback = (data) => {
     ApiConnector.transferMoney(data, (response) => {
-        if(!data.to) {
-            moneyManager.setMessage(false, 'Получатель не найден');
-        } else if(!data.amount) {
-            moneyManager.setMessage(false, 'Ошибка при переводе значения в число')
-        } else if(!data.currency) {
-            moneyManager.setMessage(false, 'Валюта для перевода не выбрана')
+        if(!response.success) {
+            moneyManager.setMessage(false, 'Ошибка при переводе значения в число');
         } else {
             ProfileWidget.showProfile(response.data);
             moneyManager.setMessage(true, 'Перевод валюты выполнен!')
@@ -103,8 +93,6 @@ favoritesWidget.addUserCallback = (data) => {
 
 favoritesWidget.removeUserCallback = (data) => {
     ApiConnector.removeUserFromFavorites(data, (response) => {
-        console.log(response);
-        
         if(response.success) {
             favoritesWidget.clearTable();
             favoritesWidget.fillTable(response.data);
